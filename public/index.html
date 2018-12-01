@@ -1,0 +1,28 @@
+<head>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(() => {
+            const input = $('#input')
+            const list = $('#list')
+            const setListItems = (items) => {
+                list.empty()
+                list.append(items.map(item => 
+                    $('<li></li>').text(item)))
+            }
+
+            input.keyup(e => $.get(
+                'http://localhost:3000/typeahead',
+                {query: e.target.value},
+                (data) => setListItems(data)))
+        })
+    </script>
+</head>
+<body>
+    <h3>rx demo</h3>
+    <input type="text" id="input">
+    <ul id="list"></ul>
+</body>

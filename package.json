@@ -1,0 +1,14 @@
+{
+  "name": "rx",
+  "version": "1.0.0",
+  "description": "rx demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "bsj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
