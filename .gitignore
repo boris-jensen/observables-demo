@@ -1,1 +1,4 @@
 node_modules/
+settings.json
+rx-java/.settings/
+rx-java/target/
