@@ -7,7 +7,7 @@ let doWait = false
 app.get('/ping', (req, res) => res.send('pong'))
 
 app.get('/typeahead', (req, res) => {
-    const response = [1, 2, 3].map(i => `${req.query.query}${i}`)
+    const response = [1, 2, 3].map(i => `${req.query.prefix}${i}`)
     const timeout = doWait ? 2000 : 0
     doWait = !doWait;
 

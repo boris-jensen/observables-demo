@@ -4,6 +4,9 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
+    <script
+        src="https://unpkg.com/rxjs/bundles/rxjs.umd.min.js">
+    </script>
     <script>
         $(document).ready(() => {
             const input = $('#input')
@@ -19,8 +22,22 @@
                 'http://localhost:3000/typeahead',
                 {prefix: prefix})
 
-            input.keyup(e => makeTypeaheadPromise(e.target.value)
-                .then(setListItems))
+            const {
+                map, 
+                debounceTime, 
+                distinctUntilChanged, 
+                switchMap,
+                tap
+            } = rxjs.operators
+
+            const inputs = rxjs
+                .fromEvent(input, 'keyup')
+                .pipe(
+                    map(s => s.target.value),
+                    debounceTime(200),
+                    distinctUntilChanged(),
+                    switchMap(makeTypeaheadPromise))
+                .subscribe(setListItems)
         })
     </script>
 </head>
