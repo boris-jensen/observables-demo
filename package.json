@@ -9,6 +9,7 @@
   "author": "bsj",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "rxjs": "^6.3.3"
   }
 }

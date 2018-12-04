@@ -1,5 +1,6 @@
 https://rxjs-dev.firebaseapp.com/api
 http://reactivex.io/documentation/operators.html
+http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Observable.html
 
 cd rx-java
 mvn clean package

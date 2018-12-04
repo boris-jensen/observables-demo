@@ -4,12 +4,12 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Unit test for AppService.
  */
-public class AppTest {
+public class AppServiceTest {
 
     @Test
     public void testHex() {
-        junit.framework.Assert.assertEquals(true, true);
+        Assert.assertEquals(true, true);
     }
 }
