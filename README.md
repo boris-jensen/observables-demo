@@ -23,6 +23,11 @@ Console tab 2:
 
 ### Interesting sites
 
-* https://rxjs-dev.firebaseapp.com/api
+_general rx documentation_
 * http://reactivex.io/documentation/operators.html
+
+_rxjs documentation_
+* https://rxjs-dev.firebaseapp.com/api
+
+_rxjava documentation_
 * http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Observable.html
