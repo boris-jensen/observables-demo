@@ -1,5 +1,7 @@
 ## Reactive extensions demo
 
+Slideshow: https://docs.google.com/presentation/d/1gggsUcO5-beLyLRHOdD1SR3EXrQe6H137Ex361DmZno/edit?usp=sharing
+
 ### Examples
 
 #### JS warmup exercises
@@ -13,12 +15,12 @@
 
 #### Java service example
 
-Console tab 1: 
+_Console tab 1:_
 - `cd rx-java`
 - `mvn clean package`
 - `java -jar target/rx-java-1.0-SNAPSHOT.jar`
 
-Console tab 2:
+_Console tab 2:_
 - `node client.js`
 
 ### Interesting sites
