@@ -6,6 +6,7 @@ cd rx-java
 mvn clean package
 java -jar target/rx-java-1.0-SNAPSHOT.jar
 
-
+node warmup.js
+node app.js
 node client.js 
 

@@ -13,9 +13,10 @@ public class AppService {
     private Subject<String> bumps;
     private Observable<List<String>> bumpBatches;
 
-    AppService(Scheduler scheduler) {
+    AppService(IBumpRepo repo, Scheduler scheduler) {
         this.bumps = PublishSubject.create();
         this.bumpBatches = bumps.buffer(1, 1, TimeUnit.SECONDS, scheduler);
+        this.getBumpBatches().subscribe(bs -> repo.addBumps(bs));
     }
 
     public boolean receiveBump(String bump) {
